@@ -20,12 +20,14 @@ function singleRound(player, computer)
         } else {
             result = "You Win! Scissors beats Paper"
         }
+    }
     if (player === "PAPER") {
         if (computer === "ROCK") {
             result = "You Win! Paper beats Rock"
         } else {
             result = "You Lose! Scissors beats Paper"
         }
+    }       
     if (player === "ROCK") {
         if (computer === "PAPER") {
             result = "You Lose! Paper beats Rock"
@@ -37,6 +39,6 @@ function singleRound(player, computer)
     return result;
 }
 
-let playerSelection = prompt('Please choose "Rock", "Paper" or "Scissors": ');
+let playerSelection = "Rock"
 
 let computerSelection = computerPlay()
