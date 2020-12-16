@@ -1,3 +1,4 @@
+let round_result = document.querySelector('#round_result');
 function computerPlay() 
 {
     const choices = ["ROCK", "PAPER", "SCISSORS"]
@@ -34,5 +35,5 @@ function singleRound(player)
         }
     }
     console.log(result)
-    return result;
+    round_result.textContent=result;
 }
