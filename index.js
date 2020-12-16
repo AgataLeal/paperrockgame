@@ -5,40 +5,34 @@ function computerPlay()
     return choices[random]
 }
 
-function singleRound(player, computer)
+function singleRound(player)
 {
     player = player.toUpperCase();
+    let computer = computerPlay()
     let result;
     console.log("Player Choice:", player)
     console.log("Computer Choice:", computer)
     if (player === computer) {
         result = "That's a tie!"
-    }
-    if (player === "SCISSORS") {
+    } else if (player === "SCISSORS") {
         if (computer === "ROCK") {
             result = "You Lose! Rock beats Scissors"
         } else {
             result = "You Win! Scissors beats Paper"
         }
-    }
-    if (player === "PAPER") {
+    } else if (player === "PAPER") {
         if (computer === "ROCK") {
             result = "You Win! Paper beats Rock"
         } else {
             result = "You Lose! Scissors beats Paper"
         }
-    }       
-    if (player === "ROCK") {
+    } else if (player === "ROCK") {
         if (computer === "PAPER") {
             result = "You Lose! Paper beats Rock"
         } else {
             result = "You Win! Rock beats Scissors"
         }
     }
-    
+    console.log(result)
     return result;
 }
-
-let playerSelection = "Rock"
-
-let computerSelection = computerPlay()
